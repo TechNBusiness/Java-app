@@ -1,5 +1,3 @@
-def gv
-
 pipeline {
     agent any
     stages {
@@ -8,16 +6,15 @@ pipeline {
                 echo 'bulding the application...'  
                 }
             }
-        }
         stage("test") {
             steps {
                     echo "testing the application..."
-                    
                 }
             }
         stage("deploy") {
             steps {
                     echo 'deploying the application...'
                 }
-            }
+        }
+    }
 }
